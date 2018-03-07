@@ -1,0 +1,39 @@
+740:087d04bbbff3f9561de360f55907af11609ac296
+0
+1
+installed:744:96612264be74f0330a46533abb6ff71a7ea25106
+4
+mbr: kubectl,x86_64,0,1.9.3,0 70
+  repo: kubernetes
+  ts_state: u
+  output_state: 20
+  isDep: False
+  reason: user
+  reinstall: False
+  relatedto: kubeadm,x86_64,0,1.9.3,0@a:dependson
+  depends_on: kubeadm,x86_64,0,1.9.3,0@a
+mbr: kubernetes-cni,x86_64,0,0.6.0,0 70
+  repo: kubernetes
+  ts_state: u
+  output_state: 20
+  isDep: True
+  reason: dep
+  reinstall: False
+  relatedto: kubeadm,x86_64,0,1.9.3,0@a:dependson kubelet,x86_64,0,1.9.3,0@a:dependson
+  depends_on: kubeadm,x86_64,0,1.9.3,0@a kubelet,x86_64,0,1.9.3,0@a
+mbr: kubelet,x86_64,0,1.9.3,0 70
+  repo: kubernetes
+  ts_state: u
+  output_state: 20
+  isDep: False
+  reason: user
+  reinstall: False
+  relatedto: kubeadm,x86_64,0,1.9.3,0@a:dependson kubernetes-cni,x86_64,0,0.6.0,0@a:dependson
+  depends_on: kubeadm,x86_64,0,1.9.3,0@a kubernetes-cni,x86_64,0,0.6.0,0@a
+mbr: kubeadm,x86_64,0,1.9.3,0 70
+  repo: kubernetes
+  ts_state: u
+  output_state: 20
+  isDep: False
+  reason: user
+  reinstall: False
